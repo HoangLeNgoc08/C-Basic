@@ -2,6 +2,7 @@
 
 int main()
 {
+	/* declare and read two integers (a, b) and the operator (x)*/
 	int a, b;
 	char x;
 	scanf("%d %d %c", &a, &b, &x);
@@ -28,7 +29,14 @@ int main()
 			}
 			break;
 		case '%':
-			printf("%d", a % b);
+			if(b != 0)
+			{
+				printf("%d", a % b);
+			}
+			else
+			{
+				printf(" b = 0");
+			}
 			break;
 		default:
 			printf("INVALID\n");
